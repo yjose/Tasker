@@ -2,10 +2,12 @@ import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Login} from 'screens';
 import TabNavigator from './Tab';
+import {useAuth} from 'core';
 
 const Stack = createStackNavigator();
 
 export const StackNavigator = () => {
+  const {status} = useAuth();
   return (
     <Stack.Navigator
       headerMode="none"
@@ -14,12 +16,15 @@ export const StackNavigator = () => {
         gestureEnabled: false,
         animationEnabled: false,
       }}>
-      <Stack.Screen
-        name="Login"
-        component={Login}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen name="Home" component={TabNavigator} />
+      {status === 'signIn' ? (
+        <Stack.Screen name="Home" component={TabNavigator} />
+      ) : (
+        <Stack.Screen
+          name="Login"
+          component={Login}
+          options={{headerShown: false}}
+        />
+      )}
     </Stack.Navigator>
   );
 };

@@ -1,8 +1,10 @@
+import {useAuth} from 'core';
 import * as React from 'react';
 import {Text, View} from 'ui';
 import {LoginForm} from './LoginForm';
 
 export const Login = () => {
+  const {signIn} = useAuth();
   return (
     <View flex={1} justifyContent="center" padding="m">
       <Text
@@ -12,7 +14,7 @@ export const Login = () => {
         testID="title">
         Sign In
       </Text>
-      <LoginForm />
+      <LoginForm login={() => signIn('my-token')} />
     </View>
   );
 };

@@ -3,6 +3,8 @@ import {Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Plus} from 'ui/icons/Plus';
 import {Home} from 'screens';
+import {useAuth} from 'core';
+import {Button} from 'ui';
 
 function HomeScreen() {
   return (
@@ -13,9 +15,11 @@ function HomeScreen() {
 }
 
 function SettingsScreen() {
+  const {signOut} = useAuth();
   return (
     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
       <Text>Settings!</Text>
+      <Button label="sign out " onPress={signOut} />
     </View>
   );
 }
