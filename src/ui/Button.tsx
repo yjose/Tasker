@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ActivityIndicator, TouchableOpacity} from 'react-native';
-import {Text, View} from 'ui';
+
 import {
   useRestyle,
   spacing,
@@ -15,6 +15,8 @@ import {
   useTheme,
 } from '@shopify/restyle';
 import {Theme} from './theme';
+import {View} from './View';
+import {Text} from './Text';
 
 const buttonVariant = createVariant({themeKey: 'buttonVariants'});
 const ButtonContainer = createRestyleComponent<
