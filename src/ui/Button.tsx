@@ -39,6 +39,7 @@ type Props = SpacingProps<Theme> &
     label?: string;
     loading?: boolean;
     disabled?: boolean;
+    testID?: string;
   };
 
 // type Props = {
@@ -50,6 +51,7 @@ type Props = SpacingProps<Theme> &
 export const Button = ({
   onPress,
   label,
+  testID,
   // disabled = false,
   loading = false,
   variant = 'primary',
@@ -64,7 +66,7 @@ export const Button = ({
   const {text} = theme.colors;
 
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} testID={testID}>
       <ButtonContainer backgroundColor="primary" {...props}>
         {loading ? (
           <ActivityIndicator color={text} />
