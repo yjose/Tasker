@@ -27,6 +27,7 @@
     "react": "17.0.1",
     "react-hook-form": "^6.15.5",
     "react-native": "0.64.0",
+    "react-native-bootsplash": "^3.2.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-reanimated": "^2.0.0",
     "react-native-safe-area-context": "^3.2.0",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@bam.tech/react-native-make": "^3.0.0",
     "@commitlint/cli": "^12.0.1",
     "@commitlint/config-conventional": "^12.0.1",
     "@react-native-community/eslint-config": "^2.0.0",

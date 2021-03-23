@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		3028A2AE05F13C005F473087 /* libPods-Tasker-TaskerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C8EA1D439AAD4F7EEB6B442 /* libPods-Tasker-TaskerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DD85BDA7260A5208003D17A0 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD85BDA6260A5208003D17A0 /* BootSplash.storyboard */; };
 		DDD054C1825746BD89F26CCD /* Inter.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73BFA6A5237C443BA14CBDDA /* Inter.ttf */; };
 /* End PBXBuildFile section */
 
@@ -38,12 +39,13 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Tasker/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tasker/main.m; sourceTree = "<group>"; };
 		4C8EA1D439AAD4F7EEB6B442 /* libPods-Tasker-TaskerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tasker-TaskerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		73BFA6A5237C443BA14CBDDA /* Inter.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Inter.ttf; path = ../assets/fonts/Inter.ttf; sourceTree = "<group>"; };
+		73BFA6A5237C443BA14CBDDA /* Inter.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Inter.ttf; path = ../assets/fonts/Inter.ttf; sourceTree = "<group>"; };
 		77B6015654287951AAA040C3 /* Pods-Tasker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasker.debug.xcconfig"; path = "Target Support Files/Pods-Tasker/Pods-Tasker.debug.xcconfig"; sourceTree = "<group>"; };
 		7EC98DD157BECDD1A83CE1D5 /* Pods-Tasker-TaskerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasker-TaskerTests.release.xcconfig"; path = "Target Support Files/Pods-Tasker-TaskerTests/Pods-Tasker-TaskerTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Tasker/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AF3305764EBA214E9A390AA /* libPods-Tasker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tasker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8370505E53BAD456168585E /* Pods-Tasker-TaskerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasker-TaskerTests.debug.xcconfig"; path = "Target Support Files/Pods-Tasker-TaskerTests/Pods-Tasker-TaskerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD85BDA6260A5208003D17A0 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = Tasker/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		FAC06A0F2B552E87D0609DD9 /* Pods-Tasker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tasker.release.xcconfig"; path = "Target Support Files/Pods-Tasker/Pods-Tasker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				DD85BDA6260A5208003D17A0 /* BootSplash.storyboard */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -114,7 +117,6 @@
 				73BFA6A5237C443BA14CBDDA /* Inter.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -157,7 +159,6 @@
 				B8370505E53BAD456168585E /* Pods-Tasker-TaskerTests.debug.xcconfig */,
 				7EC98DD157BECDD1A83CE1D5 /* Pods-Tasker-TaskerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +259,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				DDD054C1825746BD89F26CCD /* Inter.ttf in Resources */,
+				DD85BDA7260A5208003D17A0 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
