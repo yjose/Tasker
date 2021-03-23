@@ -1,10 +1,12 @@
 import * as React from 'react';
-import {Text, View} from 'react-native';
+import {SafeAreaView, Text} from 'react-native';
+import {API_URL} from '@env';
 
 export const App = () => {
   return (
-    <View>
+    <SafeAreaView>
       <Text> Hello World </Text>
-    </View>
+      <Text> API_URL : {API_URL} </Text>
+    </SafeAreaView>
   );
 };
