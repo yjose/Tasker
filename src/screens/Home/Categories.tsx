@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {StyleSheet, View, Text, FlatList} from 'react-native';
+import {FlatList} from 'react-native';
+import {Text, View} from 'ui';
 
 type CategoryType = {
   label: string;
@@ -17,9 +18,16 @@ const data: CategoryType[] = [
 
 const CategoryItem = ({label, total, color}: CategoryType) => {
   return (
-    <View style={[styles.item, {backgroundColor: color}]}>
-      <Text style={styles.label}>{label}</Text>
-      <Text style={styles.total}>{total} task</Text>
+    <View
+      margin="s"
+      padding="s"
+      paddingRight="l"
+      borderRadius={8}
+      style={{backgroundColor: color}}>
+      <Text variant="subheader">{label}</Text>
+      <Text fontSize={12} opacity={0.5}>
+        {total} task
+      </Text>
     </View>
   );
 };
@@ -35,23 +43,3 @@ export const Categories = () => {
     />
   );
 };
-
-const styles = StyleSheet.create({
-  item: {
-    padding: 12,
-    paddingRight: 24,
-    borderRadius: 8,
-    margin: 4,
-    minWidth: 120,
-  },
-  label: {
-    color: '#252A31',
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  total: {
-    color: '#252A31',
-    fontSize: 12,
-    opacity: 0.5,
-  },
-});

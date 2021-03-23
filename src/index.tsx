@@ -1,11 +1,11 @@
 import * as React from 'react';
-import {Login} from 'screens';
+import {Home} from 'screens';
 import {ThemeProvider} from 'ui';
 
 export const App = () => {
   return (
     <ThemeProvider>
-      <Login />
+      <Home />
     </ThemeProvider>
   );
 };
