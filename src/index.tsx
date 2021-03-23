@@ -1,6 +1,11 @@
 import * as React from 'react';
-import {Home} from 'screens';
+import {Login} from 'screens';
+import {ThemeProvider} from 'ui';
 
 export const App = () => {
-  return <Home />;
+  return (
+    <ThemeProvider>
+      <Login />
+    </ThemeProvider>
+  );
 };
