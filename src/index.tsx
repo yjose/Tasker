@@ -2,13 +2,16 @@ import * as React from 'react';
 import {RootNavigator} from 'navigation';
 import {ThemeProvider} from 'ui';
 import {AuthProvider} from 'core';
+import APIProvider from 'api/APIProvider';
 
 export const App = () => {
   return (
-    <AuthProvider>
-      <ThemeProvider>
-        <RootNavigator />
-      </ThemeProvider>
-    </AuthProvider>
+    <APIProvider>
+      <AuthProvider>
+        <ThemeProvider>
+          <RootNavigator />
+        </ThemeProvider>
+      </AuthProvider>
+    </APIProvider>
   );
 };

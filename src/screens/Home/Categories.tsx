@@ -1,3 +1,4 @@
+import {useCategories} from 'api';
 import * as React from 'react';
 import {FlatList} from 'react-native';
 import {Text, View} from 'ui';
@@ -7,14 +8,6 @@ type CategoryType = {
   total: number;
   color: string;
 };
-
-const data: CategoryType[] = [
-  {label: 'inbox', total: 2, color: '#EBEFF5'},
-  {label: 'work', total: 2, color: '#61DEA4'},
-  {label: 'Shopping', total: 3, color: '#F45E6D'},
-  {label: 'Family', total: 1, color: '#FFE761'},
-  {label: 'Personal', total: 4, color: '#B678FF'},
-];
 
 const CategoryItem = ({label, total, color}: CategoryType) => {
   return (
@@ -33,6 +26,7 @@ const CategoryItem = ({label, total, color}: CategoryType) => {
 };
 
 export const Categories = () => {
+  const {data} = useCategories();
   return (
     <FlatList
       horizontal={true}

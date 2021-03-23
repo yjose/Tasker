@@ -1,5 +1,6 @@
+import {useTasks} from 'api';
 import * as React from 'react';
-import {StyleSheet, FlatList, Pressable} from 'react-native';
+import {StyleSheet, FlatList, Pressable, ActivityIndicator} from 'react-native';
 import {Check, Text, UnCheck, View} from 'ui';
 import {Header} from './Header';
 
@@ -8,16 +9,6 @@ type TaskType = {
   done: boolean;
   color: string;
 };
-
-const data: TaskType[] = [
-  {label: 'Start making a presentation', done: false, color: '#EBEFF5'},
-  {label: 'Pay for rent', done: false, color: '#61DEA4'},
-  {label: 'Buy a milk', done: false, color: '#F45E6D'},
-  {label: 'Buy a chocolate for Charlotte', done: false, color: '#B678FF'},
-  {label: 'Pay for rent', done: false, color: '#61DEA4'},
-  {label: 'Buy a milk', done: false, color: '#F45E6D'},
-  {label: 'Buy a chocolate for Charlotte', done: false, color: '#B678FF'},
-];
 
 const TaskItem = ({label, done: d, color}: TaskType) => {
   const [done, setDone] = React.useState(d);
@@ -50,10 +41,15 @@ const TaskItem = ({label, done: d, color}: TaskType) => {
 };
 
 export const Tasks = () => {
+  const {isLoading, data} = useTasks();
+
+  if (isLoading) {
+    return <ActivityIndicator color="#000" />;
+  }
   return (
     <FlatList
       ListHeaderComponent={() => <Header />}
-      data={data}
+      data={data || []}
       renderItem={({item}) => <TaskItem {...item} />}
       keyExtractor={(_, index) => `item-${index}`}
       showsHorizontalScrollIndicator={false}

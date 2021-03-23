@@ -23,6 +23,7 @@
     "@react-navigation/stack": "^5.14.3",
     "@shopify/restyle": "^1.4.0",
     "add": "^2.0.6",
+    "axios": "^0.21.1",
     "react": "17.0.1",
     "react-hook-form": "^6.15.5",
     "react-native": "0.64.0",
@@ -31,6 +32,7 @@
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^2.18.1",
     "react-native-svg": "^12.1.0",
+    "react-query": "^3.13.0",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
