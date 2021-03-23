@@ -15,6 +15,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   title: {
+    fontFamily: 'Inter',
     fontSize: 32,
     fontWeight: 'bold',
     color: '#252A31',

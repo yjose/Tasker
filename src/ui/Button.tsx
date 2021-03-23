@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     borderColor: '#006CFF',
   },
   label: {
+    fontFamily: 'Inter',
     fontSize: 16,
     fontWeight: 'bold',
     color: '#FFFFFF',
